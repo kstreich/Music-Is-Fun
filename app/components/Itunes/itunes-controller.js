@@ -12,27 +12,23 @@ function drawSongs(results) {
 
   results.forEach(result => {
     template += `
-    <div class= "col-4 card">
-      <div class= "card-body justifty-content-around text-center">
-      
-        <img class= "card-img-top" src="${result.albumArt}"> 
-        
-
-          <h5 class="card-title">${result.title}</h5>
-          <h5 class= "card-title">${result.artist}</h5>
-          <p class="card-text">${result.collection}</p>
-          <p class="card-text">${result.price}</p>
-          <audio controls class="audio-width" src="${result.preview}">
-          </audio>
-      </div> 
-    </div>
-    `
-
+   <table class="table">
+     <tbody>
+       <tr>
+         <th scope="row"></th>
+          <td class="art"><img src="${result.albumArt}"></td>
+          <td><audio controls src="${result.preview}"></audio></td>
+          <td>><strong>${result.title}</strong></td>
+          <td>${result.artist}</td>
+          <td>${result.collection}</td>
+          <td>${result.price}</td>
+       </tr>
+     </tbody>
+   </table>
+       `
   })
   document.getElementById("songs").innerHTML = template
 }
-
-
 
 
 //PUBLIC
@@ -55,3 +51,31 @@ class ItunesController {
 export default ItunesController
 
 
+  // <div class= "col-3 card" style= "width: 15rem" >
+  //   <div class="card-body justifty-content-around text-center">
+
+  //     <img class="card-img-top" src="${result.albumArt}">
+
+  //       <h5 class="card-title">${result.title}</h5>
+  //       <h5 class="card-title">${result.artist}</h5>
+  //       <p class="card-text">${result.collection}</p>
+  //       <p class="card-text">${result.price}</p>
+  //       <audio controls class="audio-width mt-2" src="${result.preview}"></audio>
+  //     </div> 
+  //   </div>
+
+
+  // < table class="table" >
+  //   <tbody>
+  //     <tr>
+  //       <th scope="row"></th>
+  //       <td><img src="${result.albumArt}"></td>
+  //         <td><audio controls src="${result.preview}"></td>
+  //           <td>${result.title}</td>
+  //           <td>${result.artist}</td>
+  //           <td>${result.collection}</td>
+  //           <td>${result.price}</td>
+  //     </tr>
+  //   </tbody>
+  // </table>
+  //     `
