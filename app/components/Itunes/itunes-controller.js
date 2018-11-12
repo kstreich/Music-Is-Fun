@@ -14,11 +14,11 @@ function drawSongs(results) {
     template += `
    <table class="table">
      <tbody>
-       <tr>
-         <th scope="row"></th>
-          <td class="art"><img src="${result.albumArt}"></td>
-          <td><audio controls src="${result.preview}"></audio></td>
-          <td>><strong>${result.title}</strong></td>
+       <tr class="tbr">
+          <th scope="row"></th>
+          <td><img class="art" src="${result.albumArt}"></td>
+          <td><audio class="audio-bar" controls src="${result.preview}"></audio></td>
+          <td><strong>${result.title}</strong></td>
           <td>${result.artist}</td>
           <td>${result.collection}</td>
           <td>${result.price}</td>

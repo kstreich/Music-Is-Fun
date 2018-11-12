@@ -25,7 +25,14 @@ body {
 .table{
   margin-bottom: 0vh;
 }
-.tr{
-  display: flex;
+
+.tbr{
+  display:flex;
   align-items: baseline;
+}
+.audio-bar{
+  margin-bottom: -2rem;
+}
+.art{
+  margin-bottom: -2rem;
 }
